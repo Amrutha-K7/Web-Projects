@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Student Name: Amrutha Kenchanagowdra  -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+    <style>  
+     .main
+     {
+        position: relative;
+        width: 1270px;
+        height: 650px;
+        background:white;
+     }
+     .bgimg
+     {
+        background-image: url("https://thepeachicksbakery.co.uk/wp-content/uploads/2016/12/biscotti.jpg");
+        min-height: 220px;
+
+        /* Center and scale the image nicely */
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+     }
+    .main .first
+      {
+        position: relative;
+        width: 490px;
+        height: 640px;
+        float: left;
+        background-color:white;
+      }
+      .Businesses/*div element*/
+      {
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        background: #f5f5f5!important;
+        color:black;
+        position: relative;
+        line-height: 0.8;
+        
+      }
+      .Businesses img
+      {
+        float:right; 
+        width:180px; 
+        height:85px;
+      }
+      .main .second
+      {
+        position: relative;
+        width: 600px;
+        height: 500px;
+        background: #f5f5f5!important;
+        float: left;
+        margin-left: 3px;
+        margin-top: 15px;
+      }
+      form
+      {
+        padding-top: 100px;
+        padding-right: 400px auto;
+        text-align:center;
+        font-size:24px;
+        color: white;
+        font-weight:bolder;
+      }
+      .btn 
+      {
+        
+        font-size:20px;
+        color:black;
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      .btn:hover
+      {
+        opacity: 1;
+      }
+
+    </style>  
+
+  </head>
+  <body onload="initialize();">
+    <div class="bgimg"> 
+      <form>
+        <label>Search Terms: <input type="text" id="search" style="font-size:16px;"/></label>
+        <input type="button" class="btn" onclick="sendRequest();" value="Find" />
+     </form>
+    </div>
+    <div id ="mainbox" class="main">
+      <div id="leftbox"  class="first"></div>
+      <div id="map"  class="second"></div>
+   </div>
+  </body>
+</html>
